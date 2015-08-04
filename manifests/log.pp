@@ -1,7 +1,8 @@
 define cloudwatchlogs::log (
-  $path            = undef,
-  $streamname      = '{instance_id}',
-  $datetime_format = '%b %d %H:%M:%S',
+  $path                     = undef,
+  $streamname               = '{instance_id}',
+  $datetime_format          = '%b %d %H:%M:%S',
+  $multi_line_start_pattern = undef,
 
 ){
   if $path == undef {
